@@ -1,0 +1,29 @@
+<header id="topo">
+    <div class="container">
+  
+      <div id="logo">
+        <a routerLink="/">
+            <img src="../../assets/images/logo.png" alt="">
+        </a>
+      </div>
+  
+      <div id="search">
+        <input type="text" [(ngModel)]="searchQuery" (input)="searchMovies()" (click)="showSearchResults = true" placeholder="Buscar por filmes">
+      </div>
+      
+      <div id="search-results" *ngIf="showSearchResults">
+        <ul>
+          <li *ngFor="let movie of searchResults">
+            <a [routerLink]="['/movie', movie.imdbID]">
+              <div class="cover-poster">
+                <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+              </div>
+              <p>{{ movie.Title }} ({{ movie.Year }})</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+    </div>
+  </header>
+  

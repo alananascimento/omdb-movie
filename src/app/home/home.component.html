@@ -1,0 +1,62 @@
+
+<app-header></app-header>
+
+
+
+<section class="color-bg">
+  <div class="container">
+    <h2 class="main_title">Filmes de Ação</h2>
+    <ul class="list-movies">
+      <li *ngFor="let movie of actionMovies">
+        <a [routerLink]="['/movie', movie.imdbID]">
+          <div class="cover-poster">
+            <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+          </div>
+            <div class="name-movie">
+          <h3>{{ movie.Title }}, ({{ movie.Year }})</h3>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+  
+
+<section class="color-bg">
+  <div class="container">
+    <h2 class="main_title">Filmes de Comédia</h2>
+    <ul class="list-movies">
+      <li *ngFor="let movie of comedyMovies">
+        <a [routerLink]="['/movie', movie.imdbID]">
+          <div class="cover-poster">
+            <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+          </div>
+          <div class="name-movie">
+            <h3>{{ movie.Title }}, ({{ movie.Year }})</h3>
+          </div>
+        </a>
+      </li>
+    </ul>
+   </div>
+</section>
+
+
+<section class="color-bg">  
+  <div class="container">
+    <h2 class="main_title">Lançamentos</h2>
+    <ul class="list-movies">
+      <li *ngFor="let movie of newMovies">
+        <a [routerLink]="['/movie', movie.imdbID]">
+          <div class="cover-poster">
+            <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+          </div>
+          <div class="name-movie">
+            <h3>{{ movie.Title }}, ({{ movie.Year }})</h3>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+

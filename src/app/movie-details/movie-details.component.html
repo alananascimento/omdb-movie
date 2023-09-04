@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<section class="content-movie-details">
+    <div class="container">
+        <div class="movie-details" *ngIf="movieDetails">
+            <div class="info">
+                <h1>{{ movieDetails.Title }}</h1>
+                <p><strong>Título:</strong> {{ movieDetails.Title }}</p>
+                <p><strong>Ano:</strong> {{ movieDetails.Year }}</p>
+                <p><strong>Duração:</strong> {{ movieDetails.Runtime }}</p>
+                <p><strong>Gênero:</strong> {{ movieDetails.Genre }}</p>
+                <p><strong>Diretor:</strong> {{ movieDetails.Director }}</p>
+                <p><strong>Atores:</strong> {{ movieDetails.Actors }}</p>
+                <p><strong>Sinopse:</strong> {{ movieDetails.Plot }}</p>
+            </div>
+            <div class="poster">
+                <img [src]="movieDetails.Poster" alt="{{ movieDetails.Title }} Poster">
+            </div>
+        </div>
+    </div>
+</section>
